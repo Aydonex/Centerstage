@@ -18,12 +18,23 @@ apply from: '../build.dependencies.gradle'
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
+    defaultConfig {
+        minSdkVersion 25;
+    }
+
     packagingOptions {
         jniLibs.useLegacyPackaging true
     }
 }
 
+repositories {
+    flatDir {
+        dirs("../libs")
+    }
+}
+
 dependencies {
     implementation project(':FtcRobotController')
+    implementation name:"ThorCore", version: "0.5.1", ext:"aar"
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
 }
