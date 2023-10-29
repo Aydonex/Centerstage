@@ -5,8 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import java.io.IOException;
 
-@TeleOp(name="VisionTestOpMode")
-public class VisionTestOpMode extends OpMode {
+@TeleOp(name="VisionTestOpMode Blue")
+public class VisionTestOpModeBlue extends OpMode {
     PropVision vision;
 
     @Override

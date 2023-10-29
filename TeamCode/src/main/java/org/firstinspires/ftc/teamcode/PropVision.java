@@ -72,9 +72,9 @@ public class PropVision extends USBWebcamBase {
         zone2 = new NativeImageByteBuffer(frameSize.getWidth(), frameSize.getHeight());
         zone3 = new NativeImageByteBuffer(frameSize.getWidth(), frameSize.getHeight());
 
-        zone1.drawFilledRectangle(new Rect(0, 0, 181, 481), (byte) 1);
-        zone2.drawFilledRectangle(new Rect(250, 0, 431, 481), (byte) 1);
-        zone3.drawFilledRectangle(new Rect(500, 0, 681, 481), (byte) 1);
+        zone1.drawFilledRectangle(new Rect(0, 190, 181, 291), (byte) 1);
+        zone2.drawFilledRectangle(new Rect(250, 190, 431, 291), (byte) 1);
+        zone3.drawFilledRectangle(new Rect(500, 190, 681, 291), (byte) 1);
     }
 
     public Zone getZone() {
