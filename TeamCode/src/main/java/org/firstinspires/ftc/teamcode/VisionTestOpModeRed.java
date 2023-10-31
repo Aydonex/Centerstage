@@ -1,3 +1,7 @@
+/*
+Created to test vision for detecting the red prop in auto
+ */
+
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -12,9 +16,11 @@ public class VisionTestOpModeRed extends OpMode {
     @Override
     public void init() {
 
+        //Create webcam object to refer to when accessing camera image buffer
         WebcamName webcam = hardwareMap.get(WebcamName.class,"Camera 1");
 
         try {
+            //Creates a PropVision object to access vision data
             vision = new PropVision(webcam, PropVision.Color.RED);
         } catch (IOException e) {
             telemetry.log().add("NeonVision broke.");
@@ -24,6 +30,7 @@ public class VisionTestOpModeRed extends OpMode {
 
     @Override
     public void init_loop() {
+        //Update which zone PropVision detects
         telemetry.addData("Detected Zone: ",vision.getZone());
         telemetry.update();
     }
